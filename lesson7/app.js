@@ -1,5 +1,4 @@
-var game = new Phaser.Game(800, 600, Phaser.AUTO, '', 
-	{preload:preload, create:create, update:update});
+var game = new Phaser.Game(800, 600, Phaser.AUTO, '', {preload:preload, create:create, update:update});
 //800, 600 = width, height of canvas
 //Phaser.AUTO = setting auto to browser
 //'' = <body> 
@@ -31,32 +30,32 @@ function create(){
 	//sky
 	game.add.sprite(0,0,'sky');
 
-	//this is a variable that stores a function
-	platforms = game.add.physicsGroup();
-	platforms.enableBody = true;
+	// //this is a variable that stores a function
+	// platforms = game.add.physicsGroup();
+	// platforms.enableBody = true;
 
-	//ground
-	var ground = platforms.create(0,550,'ground');
-	//multiplies height and width of src 'platform' by 2
-	ground.scale.setTo(2,2);
-	//when things are colliding, ground would bounce back, thus gotta make it immovable
-	ground.body.immovable = true;
+	// //ground
+	// var ground = platforms.create(0,550,'ground');
+	// //multiplies height and width of src 'platform' by 2
+	// ground.scale.setTo(2,2);
+	// //when things are colliding, ground would bounce back, thus gotta make it immovable
+	// ground.body.immovable = true;
 
-	//ledge 1
-	var ledge1 = platforms.create((-100),270,'ground');
-	ledge1.body.immovable = true;
+	// //ledge 1
+	// var ledge1 = platforms.create((-100),270,'ground');
+	// ledge1.body.immovable = true;
 
-	//ledge 2
-	var ledge2 = platforms.create(400,410,'ground');
-	ledge2.body.immovable = true;
+	// //ledge 2
+	// var ledge2 = platforms.create(400,410,'ground');
+	// ledge2.body.immovable = true;
 
-	//ITEMS
-	var stlye = {font: 'bold 32px Arial', fill:'#fff'}
-	scorelabel = game.add.text(300,560,'Score: ', style);
-	scoretext = game.add.text(420, 560, score, style);
+	// //ITEMS
+	// var stlye = {font: 'bold 32px Arial', fill:'#fff'}
+	// scorelabel = game.add.text(300,560,'Score: ', style);
+	// scoretext = game.add.text(420, 560, score, style);
 
-	lifelable = game.add.text(10,5, 'Lives: ', style);
-	lifetext = game.add.text(120,5, life, style);
+	// lifelable = game.add.text(10,5, 'Lives: ', style);
+	// lifetext = game.add.text(120,5, life, style);
 }
 
 function update(){
