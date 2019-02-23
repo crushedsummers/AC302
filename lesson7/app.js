@@ -43,11 +43,11 @@ function create(){
 	ground.body.immovable = true;
 
 	//ledge 1
-	var ledge1 = platforms.create((-100),270,'ledge1');
+	var ledge1 = platforms.create((-100),270,'ground');
 	ledge1.body.immovable = true;
 
 	//ledge 2
-	var ledge2 = platforms.create(400,410,'ledge2');
+	var ledge2 = platforms.create(400,410,'ground');
 	ledge2.body.immovable = true;
 
 	//ITEMS
