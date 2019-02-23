@@ -15,13 +15,13 @@ var life = 3;
 function preload(){
 	//two important things: image (static img) and sprite sheet (animation thing)
 	//(id, src)
-	game.load.image ("platforms","../globalres/lesson7assets/platform.png");
-	game.load.image ("sky","../globalres/lesson7assets/sky.png");
-	game.load.image ("star","../globalres/lesson7assets/star.png");
-	game.load.image ("diamond","../globalres/lesson7assets/diamond.png");
-	game.load.image ("firstaid","../globalres/lesson7assets/firstaid.png");
-	game.load.spritesheet ("player","../globalres/lesson7assets/dude.png", 32, 48);
-	game.load.spritesheet ("enemy","../globalres/lesson7assets/baddie.png", 32, 32);
+	game.load.image ('platform','../globalres/lesson7assets/platform.png');
+	game.load.image ('sky','../globalres/lesson7assets/sky.png');
+	//game.load.image ('star','../globalres/lesson7assets/star.png');
+	//game.load.image ('diamond','../globalres/lesson7assets/diamond.png');
+	//game.load.image ('firstaid','../globalres/lesson7assets/firstaid.png');
+	//game.load.spritesheet ('player','../globalres/lesson7assets/dude.png', 32, 48);
+	//game.load.spritesheet ('enemy','../globalres/lesson7assets/baddie.png', 32, 32);
 }
 
 function create(){
@@ -29,33 +29,33 @@ function create(){
 
 	//BACKGROUND
 	//sky
-	game.add.sprite(0,0,"sky");
+	game.add.sprite(0,0,'sky');
 
 	//this is a variable that stores a function
 	platforms = game.add.physicsGroup();
 	platforms.enableBody = true;
 
 	//ground
-	var ground = platforms.create(0,550,"platform");
-	//multiplies height and width of src "platform" by 2
+	var ground = platforms.create(0,550,'platform');
+	//multiplies height and width of src 'platform' by 2
 	ground.scale.setTo(2,2);
 	//when things are colliding, ground would bounce back, thus gotta make it immovable
 	ground.body.immovable = true;
 
 	//ledge 1
-	var ledge1 = platforms.create((-100),270,"platform");
+	var ledge1 = platforms.create((-100),270,'platform');
 	ledge1.body.immovable = true;
 
 	//ledge 2
-	var ledge2 = platforms.create(400,410,"platform");
+	var ledge2 = platforms.create(400,410,'platform');
 	ledge1.body.immovable = true;
 
 	//ITEMS
-	var stlye = {font: "bold 32px Arial", fill:"#fff"}
-	scorelabel = game.add.text(300,560,"Score: ", style);
+	var stlye = {font: 'bold 32px Arial', fill:'#fff'}
+	scorelabel = game.add.text(300,560,'Score: ', style);
 	scoretext = game.add.text(420, 560, score, style);
 
-	lifelable = game.add.text(10,5, "Lives: ", style);
+	lifelable = game.add.text(10,5, 'Lives: ', style);
 	lifetext = game.add.text(120,5, life, style);
 }
 
