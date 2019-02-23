@@ -21,7 +21,7 @@ function preload(){
 	game.load.image ("diamond","../globalres/lesson7assets/diamond.png");
 	game.load.image ("firstaid","../globalres/lesson7assets/firstaid.png");
 	game.load.spritesheet ("player","../globalres/lesson7assets/dude.png", 32, 48);
-	game.load.spritesheet ("enemy","../globalres/lesson7assets/baddie.png", 32, 32;
+	game.load.spritesheet ("enemy","../globalres/lesson7assets/baddie.png", 32, 32);
 }
 
 function create(){
