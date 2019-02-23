@@ -36,19 +36,19 @@ function create(){
 	platforms.enableBody = true;
 
 	//ground
-	var ground = platforms.create(0,550,'platform');
+	var ground = platforms.create(0,550,'ground');
 	//multiplies height and width of src 'platform' by 2
 	ground.scale.setTo(2,2);
 	//when things are colliding, ground would bounce back, thus gotta make it immovable
 	ground.body.immovable = true;
 
 	//ledge 1
-	var ledge1 = platforms.create((-100),270,'platform');
+	var ledge1 = platforms.create((-100),270,'ledge1');
 	ledge1.body.immovable = true;
 
 	//ledge 2
-	var ledge2 = platforms.create(400,410,'platform');
-	ledge1.body.immovable = true;
+	var ledge2 = platforms.create(400,410,'ledge2');
+	ledge2.body.immovable = true;
 
 	//ITEMS
 	var stlye = {font: 'bold 32px Arial', fill:'#fff'}
