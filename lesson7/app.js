@@ -15,8 +15,8 @@ var life = 3;
 function preload(){
 	//two important things: image (static img) and sprite sheet (animation thing)
 	//(id, src)
-	game.load.image ('platform','../globalres/lesson7assets/platform.png');
-	game.load.image ('sky','../globalres/lesson7assets/sky.png');
+	game.load.image ('platform','assets/platform.png');
+	game.load.image ('sky','assets/sky.png');
 	//game.load.image ('star','../globalres/lesson7assets/star.png');
 	//game.load.image ('diamond','../globalres/lesson7assets/diamond.png');
 	//game.load.image ('firstaid','../globalres/lesson7assets/firstaid.png');
