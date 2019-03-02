@@ -65,13 +65,13 @@ function create(){
 	enemy.body.gravity.y = 500;
 	enemy.body.collideWorldBounds = true;
 
-	stars = game.add.physicsGroup();
-	stars.enableBody = true;
+	star = game.add.physicsGroup();
+	star.enableBody = true;
 
 	for (var i=0; i<12; i++){
-		var star = stars.create((70*i), 0, 'stars');
-		star.body.bounce.y = 0.7 - Math.random()*0.2;
-		star.body.gravity.y = 700;
+		var stars = star.create((70*i), 0, 'stars');
+		stars.body.bounce.y = 0.7 - Math.random()*0.2;
+		stars.body.gravity.y = 700;
 	}
 
 	cursors = game.input.keyboard.createCursorKeys();
@@ -79,7 +79,7 @@ function create(){
 
 function update(){
 	game.physics.arcade.collide(player,platforms);
-	game.physics.arcade.collide(stars,platforms);
+	game.physics.arcade.collide(star,platforms);
 	game.physics.arcade.collide(enemy,platforms);
 
 	//player not doing anything or default condition
