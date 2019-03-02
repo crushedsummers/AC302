@@ -69,7 +69,7 @@ function create(){
 	star.enableBody = true;
 
 	//for (var i=0; i<12; i++){
-		var stars = star.create((70), 0, 'stars');
+		var stars = star.create((70), 0, 'star');
 		stars.body.bounce.y = 0.7 - Math.random()*0.2;
 		stars.body.gravity.y = 700;
 	//}
@@ -79,7 +79,7 @@ function create(){
 
 function update(){
 	game.physics.arcade.collide(player,platforms);
-	game.physics.arcade.collide(stars,platforms);
+	game.physics.arcade.collide(star,platforms);
 	game.physics.arcade.collide(enemy,platforms);
 
 	//player not doing anything or default condition
