@@ -68,11 +68,11 @@ function create(){
 	star = game.add.physicsGroup();
 	star.enableBody = true;
 
-	//for (var i=0; i<12; i++){
-		var stars = star.create((70), 0, 'star');
+	for (var i=0; i<12; i++){
+		var stars = star.create((70*i), 0, 'star');
 		stars.body.bounce.y = 0.7 - Math.random()*0.2;
 		stars.body.gravity.y = 700;
-	//}
+	}
 
 	cursors = game.input.keyboard.createCursorKeys();
 }
