@@ -102,4 +102,17 @@ function update(){
 		player.body.velocity.y = (-300);
 	}
 
+	function moveEnemy(){
+		//enemy AI
+		if(emeny.x > 759){
+			enemy.animations.play("left");
+			enemy.body.velocity.x = (-120);
+		}
+		else if(enemy.x < 405){
+			enemy.animation.play("right");
+			enemy.body.velocity.x = 120;
+		}
+	}
+
+
 }
