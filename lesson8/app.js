@@ -69,7 +69,7 @@ function create(){
 	stars.enableBody = true;
 
 	for (var i=0; i<12; i++){
-		var star = stars.create((70*1), 0, 'stars');
+		var star = stars.create((70*i), 0, 'stars');
 		star.body.bounce.y = 0.7 - Math.random()*0.2;
 		star.body.gravity.y = 700;
 	}
