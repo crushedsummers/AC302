@@ -74,7 +74,7 @@ function create(){
 		star.body.gravity.y = 700;
 	}
 
-	cursors = game.input.keyboard.createCursorkeys();
+	cursors = game.input.keyboard.createCursorKeys();
 }
 
 function update(){
