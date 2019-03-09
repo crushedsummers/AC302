@@ -139,7 +139,7 @@ function update(){
 		scorelabel.text = "GAME OVER, you've scored: "+score;
 		scoretext.visible = false;
 		lifelabel.visible = false;
-		life text.visible = false;
+		lifetext.visible = false;
 	}
 
 	moveEnemy();
