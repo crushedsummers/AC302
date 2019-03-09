@@ -124,18 +124,15 @@ function update(){
 			enemy.animations.play("left");
 			enemy.body.velocity.x = (-120);
 		}
-		else if(player.y < 250){
-			if (enemy.x<1){
-				enemy.animations.play("right");
-				enemy.body.velocity.x = 120;
-			}
+		else if(player.y < (-250) && enemy.x>1){
+			enemy.animations.play("right");
+			enemy.body.velocity.x = 120;
 		}
 		else if(enemy.x < 405){
 			enemy.animations.play("right");
 			enemy.body.velocity.x = 120;
 		}
 	}
-
 	moveEnemy();
 
 	if(life<0){
