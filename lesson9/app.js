@@ -81,7 +81,7 @@ function update(){
 	game.physics.arcade.collide(player,platforms);
 	game.physics.arcade.collide(star,platforms);
 	game.physics.arcade.collide(enemy,platforms);
-	game.physics.arcade.overlap(player, stars, collectStar);
+	game.physics.arcade.overlap(player, star, collectStar);
 	game.physics.arcade.overlap(player, enemy, loseLife);
 
 	//player not doing anything or default condition
