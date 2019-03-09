@@ -128,11 +128,20 @@ function update(){
 			enemy.animations.play("right");
 			enemy.body.velocity.x = 120;
 		}
-		else if(player.y > (-250) && enemy.x < 405){
-			enemy.animations.play("right");
-		 	enemy.body.velocity.x = 120;
-		 }
+		// else if(player.y > (-250) && enemy.x < 405){
+		// 	enemy.animations.play("right");
+		//  	enemy.body.velocity.x = 120;
+		//  }
 	}
+
+	function endGame(){
+		player.kill();
+		scorelabel.text = "GAME OVER, you've scored: "+score;
+		scoretext.visible = false;
+		lifelabel.visible = false;
+		life text.visible = false;
+	}
+
 	moveEnemy();
 
 	if(life<0){
