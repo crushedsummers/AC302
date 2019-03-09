@@ -111,7 +111,7 @@ function update(){
 		star.reset(Math.floor(Math.random()*750),0);
 	}
 
-	function loseLife(player, enemy1){
+	function loseLife(player, enemy){
 		life --;
 		lifetext.setText(life);
 		enemy.kill();
@@ -120,7 +120,7 @@ function update(){
 
 	function moveEnemy(){
 		//enemy AI
-		if(emeny.x > 759){
+		if(enemy.x > 759){
 			enemy.animations.play("left");
 			enemy.body.velocity.x = (-120);
 		}
