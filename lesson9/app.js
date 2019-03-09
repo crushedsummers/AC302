@@ -81,6 +81,8 @@ function update(){
 	game.physics.arcade.collide(player,platforms);
 	game.physics.arcade.collide(star,platforms);
 	game.physics.arcade.collide(enemy,platforms);
+	game.physics.arcade.overlap(player, stars, collectStar);
+	game.physics.arcade.overlap(player, enemy, loseLife);
 
 	//player not doing anything or default condition
 	player.body.velocity.x=0;
@@ -102,11 +104,31 @@ function update(){
 		player.body.velocity.y = (-300);
 	}
 
+	function collectStar(player, star){
+		score += 1;
+		scoretext.setText(score);
+		star.kill();
+		star.reset(Math.floor(Math.random()*750),0);
+	}
+
+	function loseLife(player, enemy1){
+		life --;
+		lifetext.setText(life);
+		enemy.kill();
+		enemy.reset(10,20);
+	}
+
 	function moveEnemy(){
 		//enemy AI
 		if(emeny.x > 759){
 			enemy.animations.play("left");
 			enemy.body.velocity.x = (-120);
+		}
+		else if(player.y < 250){
+			if (enemy.x<1){
+				enemy.animation.play("right");
+				enemy.body.velocity.x = 120;
+			}
 		}
 		else if(enemy.x < 405){
 			enemy.animation.play("right");
@@ -114,5 +136,10 @@ function update(){
 		}
 	}
 
+	moveEnemy();
+
+	if(life<0){
+		endGame();
+	}
 
 }
