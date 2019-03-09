@@ -119,6 +119,7 @@ function update(){
 	}
 
 	function moveEnemy(){
+		console.log(enemy.x + " " + enemy.y);
 		//enemy AI
 		if(enemy.x > 759){
 			enemy.animations.play("left");
