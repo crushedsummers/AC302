@@ -128,10 +128,10 @@ function update(){
 			enemy.animations.play("right");
 			enemy.body.velocity.x = 120;
 		}
-		// else if(player.y > (-250) && enemy.x < 405){
-		// 	enemy.animations.play("right");
-		//  	enemy.body.velocity.x = 120;
-		//  }
+		else if(player.y < (250) && enemy.x < 405){
+			enemy.animations.play("right");
+		 	enemy.body.velocity.x = 120;
+		 }
 	}
 
 	function endGame(){
