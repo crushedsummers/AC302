@@ -116,6 +116,8 @@ function update(){
 		lifetext.setText(life);
 		enemy.kill();
 		enemy.reset(10,20);
+		enemy.animations.play("left");
+		enemy.body.velocity.x = (-120);
 	}
 
 	function moveEnemy(){
